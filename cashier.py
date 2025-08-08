@@ -146,6 +146,14 @@ def print_receipt(cart: Dict[int, CartLine]) -> None:
     print(f"{'Total':<32}{format_currency(total):>14}")
 
 
+def print_wifi_info() -> None:
+    """Display WiFi credentials after checkout."""
+
+    print("\n=== WiFi Information ===")
+    print("Name     : Kedaiomah")
+    print("Password : rumahnenek123")
+
+
 def main() -> None:
     """Main application loop."""
 
@@ -162,6 +170,7 @@ def main() -> None:
 
         if action == "checkout":
             print_receipt(cart)
+            print_wifi_info()
             print("\nThank you for shopping!")
             break
 
